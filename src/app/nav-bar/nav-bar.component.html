@@ -1,0 +1,45 @@
+<mat-toolbar style="background-color: gray">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{ note }}</span>
+  <span class="example-spacer"></span>
+  <div class="demo-section">
+    <button
+      mat-raised-button
+      [matBadge]="note"
+      [matBadgePosition]="note > 5 ? 'before' : 'after'"
+      (click)="sayhello()"
+    >
+      {{ note }}
+    </button>
+    <!-- binding
+    one way binding  : ts ===> html
+    ****1 intropolation    ex:  <span>{{ note }}</span>
+    ****2 property binding    ex:  matBadge="{{ note }}" or [matBadge]="note"
+    ex: [matBadgePosition]="note > 5 ? 'before' : 'after'"
+    ****3 event binding ex: (click)="sayhello()" -->
+  </div>
+  <button style="margin: 5px" mat-raised-button (click)="viewCourse()">
+    test output
+  </button>
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+  >
+    <mat-icon>share</mat-icon>
+  </button>
+  <h1>{{ inputTest() }}</h1>
+</mat-toolbar>
